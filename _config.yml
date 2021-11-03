@@ -8,8 +8,7 @@ permalink: /articles/
 
 collections:
   articles:
-    sort_by: title
-    permalink: /:articles/:title
+    permalink: /articles/:title
     output: true
 
 # social links
