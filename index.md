@@ -2,9 +2,10 @@
 title: Заголовок главной страницы
 description: Описание содержимого главной страницы
 ---
+{{ site.url }}
 <ul>
     {% for article in site.posts %}
-        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+        <li><a href="/pages{{ article.url }}">{{ article.title }}</a></li>
     {% endfor %}
 </ul>
 
