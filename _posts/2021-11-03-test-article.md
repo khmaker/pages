@@ -1,8 +1,6 @@
 ---
-layout: post
 title: "Article title"
-date: 2021-04-20
-categories: CATEGORY-1
+categories: [CATEGORY-1, CATEGORY-2]
 ---
 
 article body
