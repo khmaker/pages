@@ -4,6 +4,8 @@ author: khmaker
 email: khmaker@yandex.ru
 description: no discription
 
+permalink: /articles
+
 collections:
   articles:
     sort_by: title
