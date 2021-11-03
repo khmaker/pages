@@ -2,6 +2,11 @@
 title: Заголовок главной страницы
 description: Описание содержимого главной страницы
 ---
+{% for article in site.posts %}
+  <h2>
+    <a href="{{ article.url }}">{{ article.title }}</a>
+  </h2>
+{% endfor %}
 
 ## Welcome to GitHub Pages
 

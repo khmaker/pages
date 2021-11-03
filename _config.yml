@@ -4,8 +4,6 @@ author: khmaker
 email: khmaker@yandex.ru
 description: no discription
 
-permalink: /articles/
-
 # social links
 github_username: khmaker # DO NOT include the @ character, or else the build will fail!
 
