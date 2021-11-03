@@ -3,8 +3,8 @@ title: Заголовок главной страницы
 description: Описание содержимого главной страницы
 ---
 <ul>
-    {% for article in site.posts %}
-        <li><a href="{{ page.url }}{{ article.url }}">{{ article.title }}</a></li>
+    {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
 
