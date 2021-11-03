@@ -8,7 +8,6 @@ permalink: /articles/
 
 collections:
   articles:
-    permalink: /articles/:title
     output: true
 
 # social links
