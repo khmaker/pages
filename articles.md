@@ -3,11 +3,9 @@ title: Заметки
 description: Описание заметок
 ---
 
-<p>{{ site }}</p>
-<p>{{ site.articles }}</p>
-<p>{{ articles }}</p>
+<p>{{ site.permalinks }}</p>
 {% for article in site.articles %}
-  <a href="{{ article.url }}">
-    <h2>{{ article.title }}</h2>
-  </a>
+  <h2>
+    <a href="{{ article.url }}">{{ article.title }}</a>
+  </h2>
 {% endfor %}
