@@ -1,7 +1,6 @@
 ---
 title: Заголовок главной страницы
 description: Описание содержимого главной страницы
-permalink: /:articles/:title
 ---
 
 ## Welcome to GitHub Pages
