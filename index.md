@@ -4,7 +4,7 @@ description: Описание содержимого главной страни
 ---
 <ul>
     {% for article in site.posts %}
-        <li><a href="./{{ article.url }}">{{ article.title }}</a></li>
+        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
     {% endfor %}
 </ul>
 
