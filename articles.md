@@ -3,8 +3,8 @@ title: Заметки
 description: Описание заметок
 ---
 
-{% for article in site.articles %}
-  <a href="{{ article.url }}">
-    <h2>{{ article.title }}</h2>
-  </a>
+{% for article in site.posts %}
+  <h2>
+    <a href="{{ article.url }}">{{ article.title }}</a>
+  </h2>
 {% endfor %}

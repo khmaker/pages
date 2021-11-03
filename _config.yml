@@ -6,12 +6,6 @@ description: no discription
 
 permalink: /articles/
 
-collections:
-  articles:
-    sort_by: title
-    permalink: /:articles/:title
-    output: true
-
 # social links
 github_username: khmaker # DO NOT include the @ character, or else the build will fail!
 
