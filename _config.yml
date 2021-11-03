@@ -9,6 +9,7 @@ permalink: /articles/
 collections:
   articles:
     sort_by: title
+    permalink: /:articles/:title
 
 # social links
 github_username: khmaker # DO NOT include the @ character, or else the build will fail!
