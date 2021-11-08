@@ -3,7 +3,6 @@ title: Заголовок главной страницы
 description: Описание содержимого главной страницы
 ---
 {% if site.posts %}
-{{ site.posts }}
     <h1>posts</h1>
         <ul>
             {% for post in site.posts %}
@@ -13,7 +12,6 @@ description: Описание содержимого главной страни
 {% endif %}
 
 {% if site.tags %}
-{{ site.tags }}
     <h1>tags</h1>
         {% for tag in site.tags %}
           <h3>{{ tag[0] }}</h3>
