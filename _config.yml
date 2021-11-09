@@ -1,5 +1,6 @@
 theme: jekyll-theme-leap-day
-url: https://khmaker.github.io/pages
+remote_theme: pages-themes/leap-day@v0.2.0
+baseurl: /pages
 
 author: khmaker
 email: khmaker@yandex.ru
@@ -9,3 +10,6 @@ description: no discription
 github_username: khmaker # DO NOT include the @ character, or else the build will fail!
 
 show_excerpts: false # set to false to remove excerpts on the homepage
+
+plugins:
+  - jekyll-remote-theme
