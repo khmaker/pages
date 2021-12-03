@@ -149,7 +149,7 @@ _Tools -> File Watchers_ нажимаем на ➕ и выбираем _\<custom
             <img src="{{ page.images_dir | relative_url }}{{ path }}1.png" alt=""/>
         </a>
         <figcaption>
-            1
+            Создаем новый File Watcher
         </figcaption>
     </figure>
     <figure>
@@ -157,11 +157,80 @@ _Tools -> File Watchers_ нажимаем на ➕ и выбираем _\<custom
             <img src="{{ page.images_dir | relative_url }}{{ path }}2.png" alt=""/>
         </a>
         <figcaption>
-            2
+            Заполняем нужные поля
         </figcaption>
     </figure>
 </div>
-    #TODO: Текстовые данные полей 
+<style>
+    label, input {
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+    }
+    input {
+        width: 60%;
+    }
+    .checkbox_label {
+        width: 60%;
+    }
+    .checkbox_input {
+        width: 5%;
+    }
+</style>
+<form>
+    New File Watcher
+    <fieldset>
+        <legend></legend>
+        <label for="Name">Name: </label>
+        <input type="text" name="Name" value="flake8" readonly disabled>
+    </fieldset>
+    <fieldset>
+        <legend>Files to Watch</legend>
+        <label for="File type">File type: </label>
+        <input type="text" name="File type" value="Python" readonly disabled><br>
+        <label for="Scope">Scope: </label>
+        <input type="text" name="Scope" value="Project Files" readonly disabled><br>
+    </fieldset>
+    <fieldset>
+        <legend>Tool to Run on Changes</legend>
+        <label for="Program">Program: </label>
+        <input type="text" name="Program" value="путь до flake8" readonly disabled><br>
+        <label for="Arguments">Arguments: </label>
+        <input type="text" name="Arguments" value="$FileDir$/$FileName$" readonly><br>
+        <label for="Output paths to refresh">Output paths to refresh: </label>
+        <input type="text" name="Output paths to refresh" value="" readonly disabled><br>
+        <label for="Working directory">Working directory: </label>
+        <input type="text" name="Working directory" value="$ProjectFileDir$" readonly><br>
+        <label for="Environment variables">Environment variables: </label>
+        <input type="text" name="Environment variables" value="" readonly disabled><br>
+    </fieldset>
+    <fieldset>
+        <legend>Advanced Options</legend>
+        <input class="checkbox_input" type="checkbox" name="Auto-save edited files to trigger the watcher" checked disabled>
+        <label class="checkbox_label" for="Auto-save edited files to trigger the watcher">Auto-save edited files to trigger the watcher</label><br>
+
+        <input class="checkbox_input" type="checkbox" name="Trigger the watcher on external changes" checked disabled>
+        <label class="checkbox_label" for="Trigger the watcher on external changes">ATrigger the watcher on external changes</label><br>
+
+        <input class="checkbox_input" type="checkbox" name="Trigger the watcher regardless of syntax errors" disabled>
+        <label class="checkbox_label" for="Trigger the watcher regardless of syntax errors">Trigger the watcher regardless of syntax errors</label><br>
+
+        <input class="checkbox_input" type="checkbox" name="Create output file from stdout" disabled>
+        <label class="checkbox_label" for="Create output file from stdout">Create output file from stdout</label><br>
+
+        <label for="Show console">Show console: </label>
+        <select disabled>
+            <option value="Always" readonly>Always</option>
+            <option value="On error" readonly>On error</option>
+            <option value="Never" selected="selected" readonly>Never</option>
+        </select>
+        <br>
+        <label for="Output filters">Output filters: </label>
+        <input type="text" name="Output filters" value="$FILE_PATH$:$LINE$:$COLUMN$: $MESSAGE$" readonly><br>
+    </fieldset>
+</form>
+<br>
+
 <div class="fig_wrap">
     <figure>
         <a href="{{ page.images_dir | relative_url }}{{ path }}3.png" target="_blank">
