@@ -11,6 +11,9 @@ images_dir: "/pics/posts/PyCharm_setup/"
 
 **Все скриншоты кликабельны.**
 
+### Зачем всё это нужно
+    #TODO: написать зачем это нужно
+
 ### Необходимые условия
 Должны быть установлены:
 * [Python](https://www.python.org/downloads/)
@@ -35,6 +38,7 @@ images_dir: "/pics/posts/PyCharm_setup/"
         Вкладка Customize
     </figcaption>
 </figure>
+
 
 ### Меняем терминал
 <small>* данное действие опционально</small>
@@ -308,6 +312,10 @@ _Tools -> External Tools_ нажимаем на ➕
     </fieldset>
 </form>
 <br>
+
+# Послесловие
+### Как этим пользоваться
+    #TODO: написать как этим пользоваться
 
 <figure>
     <a href="{{ page.images_dir | relative_url }}{{ path }}2.png" target="_blank">
