@@ -54,7 +54,9 @@ _Tools -> Terminal_ в разделе Application Settings в поле Shell pat
 </figure>
 
 ### Устанавливаем необходимые зависимости
-    # TODO: добавить причину установки в системный python
+Поскольку линтером и автоформаттером пользоваться приходится практически в каждом проекте, 
+мы установим всё необходимое в системный python.
+Это позволит установить и настроить всё необходимое однажды и использовать в любом проекте.
 
 * [flake8](https://github.com/pycqa/flake8)
 * [flake8-broken-line](https://github.com/wemake-services/flake8-broken-line)
@@ -164,17 +166,20 @@ _Tools -> File Watchers_ нажимаем на ➕ и выбираем _\<custom
 <style>
     label, input {
         display: inline-block;
-        width: 30%;
+        width: 27.5%;
         text-align: left;
     }
     input {
-        width: 60%;
+        width: 70%;
     }
     .checkbox_label {
-        width: 60%;
+        width: 70%;
     }
     .checkbox_input {
         width: 5%;
+    }
+    .narrow {
+        width: 23%;
     }
 </style>
 <form>
@@ -210,7 +215,7 @@ _Tools -> File Watchers_ нажимаем на ➕ и выбираем _\<custom
         <label class="checkbox_label" for="Auto-save edited files to trigger the watcher">Auto-save edited files to trigger the watcher</label><br>
 
         <input class="checkbox_input" type="checkbox" name="Trigger the watcher on external changes" checked disabled>
-        <label class="checkbox_label" for="Trigger the watcher on external changes">ATrigger the watcher on external changes</label><br>
+        <label class="checkbox_label" for="Trigger the watcher on external changes">Trigger the watcher on external changes</label><br>
 
         <input class="checkbox_input" type="checkbox" name="Trigger the watcher regardless of syntax errors" disabled>
         <label class="checkbox_label" for="Trigger the watcher regardless of syntax errors">Trigger the watcher regardless of syntax errors</label><br>
@@ -250,5 +255,65 @@ _Tools -> File Watchers_ нажимаем на ➕ и выбираем _\<custom
     </figure>
 </div>
 
+### Создаём инструмент для использования автоформаттера
+_Tools -> External Tools_ нажимаем на ➕
+{% assign path = "External_tools/" %}
+<figure>
+    <a href="{{ page.images_dir | relative_url }}{{ path }}1.png" target="_blank">
+        <img src="{{ page.images_dir | relative_url }}{{ path }}1.png" alt=""/>
+    </a>
+    <figcaption>
+        Заполняем нужные поля
+    </figcaption>
+</figure>
+<form>
+    Edit Tool
+    <fieldset>
+        <legend></legend>
+        <label for="Name">Name: </label>
+        <input class="narrow" type="text" name="Name" value="flake8" readonly disabled>
+        <label class="narrow" for="Group">Group: </label>
+        <select class="narrow" disabled>
+            <option value="External Tools" selected="selected" readonly>External Tools</option>
+        </select>
+        <label for="Description">Description: </label>
+        <input type="text" name="Description" value="PEP 8 auto formatter" readonly disabled>
+    </fieldset>
+    <fieldset>
+        <legend>Tool Settings</legend>
+        <label for="Program">Program: </label>
+        <input type="text" name="Program" value="путь до autopep8" readonly disabled><br>
+        <label for="Arguments">Arguments: </label>
+        <input type="text" name="Arguments" value="--in-place --aggressive --aggressive $FilePath$" readonly><br>
+        <label for="Working directory">Working directory: </label>
+        <input type="text" name="Working directory" value="$ProjectFileDir$" readonly><br>
+    </fieldset>
+    <fieldset>
+        <legend>Advanced Options</legend>
+        <input class="checkbox_input" type="checkbox" name="Synchronize files after execution" checked disabled>
+        <label class="checkbox_label" for="ASynchronize files after execution">Synchronize files after execution</label><br>
 
-    #TODO: Дописать про автоформаттер
+        <input class="checkbox_input" type="checkbox" name="Open console for tool output" checked disabled>
+        <label class="checkbox_label" for="Open console for tool output">Open console for tool output</label><br>
+
+        <input style="margin-left: 5%;" class="checkbox_input" type="checkbox" name="Make console active on message in stdout" disabled>
+        <label class="checkbox_label" for="Make console active on message in stdout">Make console active on message in stdout</label><br>
+
+        <input style="margin-left: 5%;" class="checkbox_input" type="checkbox" name="Make console active on message in stderr" disabled>
+        <label class="checkbox_label" for="Make console active on message in stderr">Make console active on message in stderr</label><br>
+
+
+        <label for="Output filters">Output filters: </label>
+        <input type="text" name="Output filters" value="$FILE_PATH$\:$LINE$\:$COLUMN$\:.*" readonly><br>
+    </fieldset>
+</form>
+<br>
+
+<figure>
+    <a href="{{ page.images_dir | relative_url }}{{ path }}2.png" target="_blank">
+        <img src="{{ page.images_dir | relative_url }}{{ path }}2.png" alt=""/>
+    </a>
+    <figcaption>
+        Вызываем автоформаттер из контекстного меню
+    </figcaption>
+</figure>
