@@ -12,7 +12,7 @@ description: Описание содержимого главной страни
 </ul>
 {% endif %}
 
-{% if site.tags %}
+{% if site.tags.size > 0 %}
 <h1>tags</h1>
 {% for tag in site.tags %}
 <h3>{{ tag[0] }}</h3>
