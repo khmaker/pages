@@ -1,9 +1,9 @@
 ---
 layout: default
-title: PyCharm и все, все, все.
+title: PyCharm + autopep8 и flake8.
 date: 2021-12-01
 description: Руководство по настройке PyCharm для использования автоформаттера autopep8 и линтера flake8
-tags: [PyCharm]
+tags: []
 images_dir: "/pics/posts/PyCharm_setup/"
 ---
 # Предисловие
