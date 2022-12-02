@@ -1,0 +1,145 @@
+Общие для списков и <a href="https://pythonz.net/references/named/tuple/"></a>  операции имеют одинаковую сложность.
+<div>
+    <p>
+        Далее N — количество элементов в контейнере;<br>
+        k — значение параметра, либо количество элементов в параметре.
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <th>операция</th>
+            <th>сложность</th>
+            <th>код</th>
+        </tr>
+        <tr>
+            <td>Обращение по индексу</td>
+            <td>O(1)</td>
+            <td><code>lst[i]</code></td>
+        </tr>
+        <tr>
+            <td>Присвоение</td>
+            <td>O(1)</td>
+            <td><code>lst[i] = 0</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/len/">len</a></td>
+            <td>O(1)</td>
+            <td><code>len(lst)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.append/">.append</a></td>
+            <td>O(1)</td>
+            <td><code>lst.append(5)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.pop/">.pop</a></td>
+            <td>O(1)</td>
+            <td><code>lst.pop()</code> аналогично <code>lst.pop(-1)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.pop/">.pop</a></td>
+            <td>O(N)</td>
+            <td><code>lst.pop(i)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.clear/">.clear</a></td>
+            <td>O(1)</td>
+            <td><code>lst.clear()</code></td>
+        </tr>
+        <tr>
+            <td>Срез</td>
+            <td>O(b-a)</td>
+            <td><code>lst[a:b]</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.extend/">.extend</a></td>
+            <td>O(len(k))</td>
+            <td>
+                <code>lst.extend(k)</code>
+                <br>
+                зависит от длины аргумента k
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list/">Создание</a></td>
+            <td>O(len(k))</td>
+            <td>
+                <code>list(k)</code>
+                <br>
+                зависит от длины аргумента k
+            </td>
+        </tr>
+        <tr>
+            <td>Равенство списков</td>
+            <td>O(N)</td>
+            <td>
+                <code>lst1 == lst2</code>
+                <br>
+                <code>lst1 != lst2</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.insert/">.insert</a></td>
+            <td>O(N)</td>
+            <td><code>lst.insert(0, 5)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/del/">del</a></td>
+            <td>O(N)</td>
+            <td>
+                <code>del l[i]</code> один элемент
+                <br>
+                <code>del l[a:b]</code> срез
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.remove/">.remove</a></td>
+            <td>O(N)</td>
+            <td><code>lst.remove(...)</code></td>
+        </tr>
+        <tr>
+            <td>Присутствие элемента в списке</td>
+            <td>O(N)</td>
+            <td><code>k in lst</code><br><code>k not in lst</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.copy/">.copy</a></td>
+            <td>O(N)</td>
+            <td><code>lst.copy()</code> аналогично <code>lst[:]</code></td>
+        </tr>
+
+        <tr>
+            <td>
+                <a href="https://pythonz.net/references/named/min/">min</a>
+                <br>
+                <a href="https://pythonz.net/references/named/max/">max</a></td>
+            <td>O(N)</td>
+            <td><code>min(lst)</code><br><code>max(lst)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.reverse/">.reverse</a></td>
+            <td>O(N)</td>
+            <td><code>lst.reverse()</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/for-in-else/">Проход</a></td>
+            <td>O(N)</td>
+            <td><code>for el in lst:</code></td>
+        </tr>
+        <tr>
+            <td>Присвоение среза</td>
+            <td>O(N)</td>
+            <td><code>lst[a:b] = ...</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/list.sort/">.sort</a></td>
+            <td>O(N log N)</td>
+            <td><code>lst.sort()</code></td>
+        </tr>
+        <tr>
+            <td>Умножение</td>
+            <td>O(k*N)</td>
+            <td><code>k * lst</code></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

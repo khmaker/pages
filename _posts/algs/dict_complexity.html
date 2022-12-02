@@ -1,0 +1,94 @@
+<div>
+    <p>
+        Далее N — количество элементов в контейнере;<br>
+        k — значение параметра, либо количество элементов в параметре.
+    </p>
+<table class="table table-striped table-bordered table-hover">
+    <tbody>
+    <tr>
+        <th>операция</th>
+        <th>сложность</th>
+        <th>код</th>
+    </tr>
+    <tr>
+        <td>Обращение по ключу</td>
+        <td>O(1)</td>
+        <td><code>dictionary[k]</code></td>
+    </tr>
+    <tr>
+        <td>Присвоение</td>
+        <td>O(1)</td>
+        <td><code>dictionary[k] = v</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/len/">len</a></td>
+        <td>O(1)</td>
+        <td><code>len(dictionary)</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/del/">del</a></td>
+        <td>O(1)</td>
+        <td><code>del dictionary[k]</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/dict.setdefault/">.setdefault</a>
+        </td>
+        <td>O(1)</td>
+        <td><code>dictionary.setdefault(1)</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/dict.pop/">.pop</a>
+        </td>
+        <td>O(1)</td>
+        <td><code>dictionary.pop(k)</code></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://pythonz.net/references/named/dict.popitem/">.popitem</a>
+        </td>
+        <td>O(1)</td>
+        <td><code>dictionary.popitem()</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/dict.clear/">.clear</a>
+        </td>
+        <td>O(1)</td>
+        <td>
+          <code>dictionary.clear()</code><br>
+          <code>dictionary = {}</code><br>
+          <code>dictionary = dict()</code>
+        </td>
+    </tr>
+    <tr>
+        <td>Представление</td>
+        <td>O(1)</td>
+        <td><code>dictionary.keys()</code></td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/dict/">Создание</a>
+        </td>
+        <td>O(len(k))</td>
+        <td>
+          <code>dict(k)</code><br>
+          Зависит от числа кортежей (ключ, значение)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="http://pythonz.net/references/named/for-in-else/">Проход</a>
+        </td>
+        <td>O(N)</td>
+        <td>
+          <code>for k in dictionary:</code><br>
+          То же для keys(), values(), items().
+        </td>
+    </tr>
+    <tr>
+        <td><a href="http://pythonz.net/references/named/dict.copy/">.copy</a>
+        </td>
+        <td>O(N)</td>
+        <td><code>dictionary_copy = dictionary.copy()</code></td>
+    </tr>
+    </tbody>
+</table>
+</div>

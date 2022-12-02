@@ -1,0 +1,120 @@
+<div>
+    <p>
+        Далее N — количество элементов в контейнере;
+        s и t - множества, если не указано другое.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Операция</th>
+                <th>Ср. сложность</th>
+                <th>Пример</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/len/">len</a></td>
+            <td>O(1)</td>
+            <td><code>len(s)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set.add/">.add</a></td>
+            <td>O(1)</td>
+            <td><code>s.add(5)</code></td>
+        </tr>
+        <tr>
+            <td>Проверка на входимость</td>
+            <td>O(1)</td>
+            <td><code>x in s</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set.remove/">.remove</a></td>
+            <td>O(1)</td>
+            <td><code>s.remove(5)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set.discard/">.discard</a></td>
+            <td>O(1)</td>
+            <td><code>s.discard(5)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set.pop/">.pop</a></td>
+            <td>O(1)</td>
+            <td><code>s.pop(i)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set.clear/">.clear</a></td>
+            <td>O(1)</td>
+            <td>
+                <code>s.clear()</code><br>
+                <code>s = set()</code>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/set/">Создание</a></td>
+            <td>O(len(k))</td>
+            <td><code>set(k)</code></td>
+        </tr>
+        <tr>
+            <td>Равенство множеств</td>
+            <td>O(len(s)</td>
+            <td>
+                <code>s == t</code>
+                <br>
+                <code>s != t</code>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.issubset/">.issubset</a>
+            </td>
+            <td>O(len(s))</td>
+            <td><code>s.issubset(t)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.issuperset/">.issuperset</a>
+            </td>
+            <td>O(len(t))</td>
+            <td><code>s.issuperset(t)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.union/">.union</a></td>
+            <td>O(len(s)+len(t))</td>
+            <td><code>s.union(t)</code></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://pythonz.net/references/named/sets.intersection/">.intersection</a>
+            </td>
+            <td>O(min(len(s), len(t)))</td>
+            <td>
+                <code>s.intersection(t)</code><br>
+                Заменить <a href="https://pythonz.net/references/named/min/">min</a> на
+                <a href="https://pythonz.net/references/named/max/">max</a>, если
+                <code>t</code> не множество.
+            </td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.difference/">.difference</a>
+            </td>
+            <td>O(len(s))</td>
+            <td><code>s.difference(t)</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.symmetric_difference/">.symmetric_difference</a>
+            </td>
+            <td>O(len(s))</td>
+            <td><code>s ^ t</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/for-in-else/">Проход</a></td>
+            <td>O(N)</td>
+            <td><code>for v in s:</code></td>
+        </tr>
+        <tr>
+            <td><a href="https://pythonz.net/references/named/sets.copy/">.copy</a></td>
+            <td>O(N)</td>
+            <td><code>s.copy()</code></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
